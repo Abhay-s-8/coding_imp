@@ -223,3 +223,182 @@ int main() {
 
     return 0;
 }
+
+// lrc and vip
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int q;cin>>q;
+    
+    for(int i =0 ;i<q;i++)
+    {
+      int n ;cin>>n;
+      
+     int op[n];
+     int b[n];
+      
+      for(int i =0 ;i<n;i++)
+      {
+        cin>>op[i];
+        b[i]=op[i];
+      }
+      
+      int c[n];
+      sort(op,op+n);
+      
+      if(op[0] == op[n-1])
+      {
+        cout<<"NO"<<endl;
+      }
+      else{
+        cout<<"YES"<<endl;
+        
+        for(int i =0 ;i<n;i++)
+        {
+          if(b[i] < op[n-1] )
+          {
+            cout <<"1 ";
+          }
+          else{
+            cout << "2 ";
+          }
+          
+          
+          
+          
+        }
+        cout<<endl;
+        
+        
+      }
+    
+    }
+    return 0;
+}
+
+// pattern printing 
+// 1 
+// 1 2 
+// 1 2 3 
+// 1 2 3 4 
+// 1 2 3 4 5
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    for(int i = 1 ; i<=n ;i++)
+    {
+      for(int j = 1 ; j <= i ;j++)
+      {
+        cout<<j<<" ";
+      }
+      cout<<endl;
+    }
+    return 0;
+}
+
+// pattern printing
+// 1 2 3 4 5 
+// 1 2 3 4 
+// 1 2 3 
+// 1 2 
+// 1
+
+#include <iostream>
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    for(int i = 1 ; i<=n ;i++)
+    {
+      for(int j = 1 ; j <= n - i + 1 ;j++)
+      {
+        cout<<j<<" ";
+      }
+      cout<<endl;
+    }
+    return 0;
+}
+
+// pattern printing
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    for(int i = 1 ; i<=n ;i++)
+    {
+      for(int j = 1 ; j <= n  ;j++)
+      {
+       if(i == 1 || i ==n){
+         cout<<"*";
+       }
+        else if(j == 1 || j == n){
+         cout<<"*";
+       }
+       else{cout<<" ";}
+      }
+      cout<<endl;
+    }
+    return 0;
+}
+
+// pattern printing
+// *****
+// *****
+// *****
+// *****
+// *****
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    for(int i = 1 ; i<=n ;i++)
+    {
+      for(int j = 1 ; j <= n  ;j++)
+      {
+       cout<<"*";
+      }
+      cout<<endl;
+    }
+    return 0;
+}
+
+//pattern printing 
+// 5 
+// 4 4 
+// 3 3 3 
+// 2 2 2 2 
+// 1 1 1 1 1
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    for(int i = 1 ; i<=n ;i++)
+    {
+      for(int j = 1 ; j <= i  ;j++)
+      {
+       cout<< n - i + 1<<" ";
+      }
+      cout<<endl;
+    }
+    return 0;
+}
