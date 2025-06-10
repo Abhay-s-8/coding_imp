@@ -402,3 +402,23 @@ int main()
     }
     return 0;
 }
+
+// reverse the number
+
+// input = 5667
+// output = 7665
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;cin>>n;
+int reverse =0 ;
+while(n>0){
+    int lastDigit = n %10;
+    reverse = reverse*10 + lastDigit;
+    n =n / 10;
+}
+
+cout<<reverse<<endl;
+return 0;
+}
