@@ -33,5 +33,15 @@ int main(){
         scanf("%d",&choice);
     }
 
-    printf("first node= %d",temp->next)
-}
+    printf("first node= %d",temp->next->data);
+    printf("\nValues of CLL:");
+    temp = head;
+    do{
+        printf("%d\t",temp->data);
+temp= temp->next;
+    }
+    
+
+while(temp != head);
+return 0;}
+
