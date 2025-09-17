@@ -18,6 +18,7 @@ int main(){
             "enter data :"
         );
 
+
         scanf("%d",&newnode->data);
         if(head == 0){
             head = temp = newnode;
@@ -31,4 +32,6 @@ int main(){
         printf("Do u Want to continue press 1 otherwise 0: ");
         scanf("%d",&choice);
     }
+
+    printf("first node= %d",temp->next)
 }
