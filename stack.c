@@ -18,4 +18,7 @@ int main(){
     printf("enter name to be searched : ");
     scanf("%s",searchName);
 
+
+    
+
 }
