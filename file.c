@@ -2,46 +2,16 @@
 #include <stdlib.h>
 
 int main(){
-    struct node{
-        int data;
-        struct node *next;
 
-    };
+    int n;printf("enter the number to print :");
 
-    struct node *head=NULL,*temp, *newnode;
+    scanf("%d",&n);
 
-    int choice = 1;
-    while (choice){
-        newnode = (struct node*)malloc(sizeof(struct node));
-
-        printf(
-            "enter data :"
-        );
-
-
-        scanf("%d",&newnode->data);
-        if(head == 0){
-            head = temp = newnode;
+    for(int i =0 ;i<n;i++){
+        for(int j = 0 ;j<=i ;j++){
+            printf("%d",j+1);
         }
-        else{
-            temp->next= newnode;
-            temp = newnode;
-        }
-
-        temp  -> next = head;
-        printf("Do u Want to continue press 1 otherwise 0: ");
-        scanf("%d",&choice);
+        printf("\n");
     }
 
-    printf("first node= %d",temp->next->data);
-    printf("\nValues of CLL:");
-    temp = head;
-    do{
-        printf("%d\t",temp->data);
-temp= temp->next;
-    }
-    
-
-while(temp != head);
-return 0;}
-
+}

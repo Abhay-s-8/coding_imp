@@ -41,7 +41,7 @@ int main(){
 
 
     if(found == 1){
-        printf("name FOUND at %d position : ",x+1);
+        printf("name FOUND ");
     }
     else{
         printf("Not found");
