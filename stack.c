@@ -19,6 +19,22 @@ int main(){
     scanf("%s",searchName);
 
 
-    
+    int low = 0;
+    int high = n - 1;
 
+    while(low <= high){
+        int mid = (low + high)/2;
+
+        int cmp = strcmp(searchName,contacts[mid]);
+        if(cmp == 0 ){
+            found = 1;
+            break;
+        }
+        elseif(cmp > 0){
+            low = mid +1;
+        }
+        else{
+
+        }
+    }
 }
