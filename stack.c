@@ -30,11 +30,23 @@ int main(){
             found = 1;
             break;
         }
-        elseif(cmp > 0){
-            low = mid +1;
+        else if (cmp > 0)
+        {
+            low = mid + 1;
         }
-        else{
-
+        else {
+            high = mid -1;
         }
     }
+
+
+    if(found == 1){
+        printf("name FOUND at %d position : ",x);
+    }
+    else{
+        printf("Not found");
+    }
+
+    return 0;
+
 }
