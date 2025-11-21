@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 50   // maximum parcels queue can hold
+
+int queue[MAX];
+int front = -1, rear = -1;
+
+// Add parcel to queue (Enqueue)
+void enqueue(int parcel) {
+    if (rear == MAX - 1) {
+        printf("Queue Overflow! Cannot add more parcels.\n");
+    } else {
+        if (front == -1)
+            front = 0;  // first element
+        queue[++rear] = parcel;
+        printf("Parcel %d added to the queue.\n", parcel);
+    }
+}
+
+// Remove parcel from queue (Dequeue)
+void dequeue() {
+    if (front == -1 || front > rear) {
+        printf("Queue Underflow! No parcels to remove.\n");
+    } else {
+        printf("Parcel %d removed from the queue.\n", queue[front]);
+        front++;
+    }
+}
+
+// Display parcels in queue
+void display() {
+    if (front == -1 || front > rear) {
+        printf("No parcels in the queue.\n");
+    } else {
+        printf("Parcels in queue (front to back):\n");
+        for (int i = front; i <= rear; i++)
+            printf("%d\n", queue[i]);
+    }
+}
+
+int main() {
+    int choice, parcel;
+
+    while (1) {
+        printf("\n--- Parcel Handling System (Queue: FIFO) ---\n");
+        printf("1. Add Parcel (Enqueue)\n");
+        printf("2. Remove Parcel (Dequeue)\n");
+        printf("3. Display Parcels\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter parcel number: ");
+                scanf("%d", &parcel);
+                enqueue(parcel);
+                break;
+
+            case 2:
+                dequeue();
+                break;
+
+            case 3:
+                display();
+                break;
+
+            case 4:
+                exit(0);
+
+            default:
+                printf("Invalid choice! Try again.\n");
+        }
+    }
+
+    return 0;
+}
