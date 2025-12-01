@@ -15,7 +15,7 @@ public final class PowerOfTwoMaxHeap<T extends Comparable<? super T>> {
         if (childrenPower < 0 || childrenPower > MAX_CHILDREN_POWER)
             throw new IllegalArgumentException("childrenPower must be in range [0, " + MAX_CHILDREN_POWER + "]");
         this.childrenPower = childrenPower;
-        
+        this.childrenCount = 1 << childrenPower;
         this.heap = new Object[Math.max(DEFAULT_CAPACITY, 1)];
         this.size = 0;
     }
