@@ -459,3 +459,35 @@ int main()
     }
     return 0;
 }
+
+
+// pattern printing
+// 1    1
+// 12  21    
+// 123321
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    
+    for(int i= n - 1;i>=0;i--){
+      for(int j =0 ;j< n-i;j++){
+      cout<<j + 1;
+      }
+      for(int j = 0;j<i;j++){
+        cout<<" ";
+      }
+      
+      for(int j=0;j<i;j++){
+        cout<<" ";
+      }
+      for(int j =n - i;j>0;j--){
+      cout<< j ;
+      }
+      cout<<endl;
+    }
+    return 0;
+}
