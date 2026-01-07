@@ -491,3 +491,29 @@ int main()
     }
     return 0;
 }
+// pattern printing
+// ABCDE  
+// ABCD
+// ABC
+// AB
+// A
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int n;cin>>n;
+    char c = 65 ;
+    
+    for(int i= 0;i <  n  ;i++){
+      char x = 0;
+      for(int j =0 ;j< n - i;j++){
+              x = c + j ;
+      cout<< x ;
+
+      }
+
+      cout<<endl;
+    }
+    return 0;
+}
