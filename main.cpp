@@ -5,7 +5,8 @@
 #include <cmath>
 using namespace std;
 
-int main() 
+
+int main1() 
 {
    string s ;
    cin>>s;
@@ -33,7 +34,7 @@ int main()
    }
    
    
-    return 0;
+    return 1;
     
 }
 
